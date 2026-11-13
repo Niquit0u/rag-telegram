@@ -1,0 +1,16 @@
+# Secretos
+.env
+
+# Entorno virtual (cada uno se crea el suyo)
+.venv/
+venv/
+
+# Base de vectores (se regenera corriendo el script de carga)
+chroma_db/
+
+# Archivos que genera Python
+__pycache__/
+*.pyc
+
+# Configuración de PyCharm
+.idea/
