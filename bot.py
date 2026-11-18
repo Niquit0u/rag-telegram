@@ -93,7 +93,8 @@ async def manejar_mensaje(update: Update, context: ContextTypes.DEFAULT_TYPE):
         parar.set()
         await tarea_escribiendo
 
-    texto = f"{respuesta}"
+    texto_fuentes = "\n".join(f"• {archivo} (pág. {pagina})" for archivo, pagina in fuentes)
+    texto = f"{respuesta}\n\n📄 Fuentes:\n{texto_fuentes}"
 
     # Si la respuesta es muy larga, se manda en varias partes
     for i in range(0, len(texto), LIMITE_MENSAJE):
